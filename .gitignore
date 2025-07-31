@@ -1,0 +1,17 @@
+ECHO ist eingeschaltet (ON).
+# IntelliJ / Java / Spring Boot
+backend/target/
+*.iml
+.idea/
+*.log
+
+# Node / React
+frontend-admin/node_modules/
+frontend-admin/build/
+
+# Öffentliches Frontend
+frontend-public/node_modules/
+frontend-public/dist/
+
+# Systemdateien
+.DS_Store
