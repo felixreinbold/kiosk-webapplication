@@ -24,4 +24,15 @@ public class AngebotService {
     public void angebotLoeschen(Long id) {
         angebotRepository.deleteById(id);
     }
+
+    public Angebot angebotAktualisieren(Long id, Angebot neuesAngebot) {
+        Angebot vorhandenesAngebot = angebotRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Angebot nicht gefunden mit ID: " + id));
+
+        vorhandenesAngebot.setTitel(neuesAngebot.getTitel());
+        vorhandenesAngebot.setBeschreibung(neuesAngebot.getBeschreibung());
+        vorhandenesAngebot.setBildUrl(neuesAngebot.getBildUrl());
+
+        return angebotRepository.save(vorhandenesAngebot);
+    }
 }

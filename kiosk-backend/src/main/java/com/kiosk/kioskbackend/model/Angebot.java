@@ -16,4 +16,36 @@ public class Angebot {
     private String titel;
     private String beschreibung;
     private String bildUrl;
+
+    public String getTitel() {
+        return titel;
+    }
+
+    public void setTitel(String titel) {
+        this.titel = titel;
+    }
+
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    public void setBeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
+    }
+
+    public String getBildUrl() {
+        return bildUrl;
+    }
+
+    public void setBildUrl(String bildUrl) {
+        this.bildUrl = bildUrl;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
