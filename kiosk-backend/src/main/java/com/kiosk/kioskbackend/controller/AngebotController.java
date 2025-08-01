@@ -1,13 +1,11 @@
 package com.kiosk.kioskbackend.controller;
 
-import com.kiosk.kioskbackend.dto.ChangePasswordRequest;
-import com.kiosk.kioskbackend.model.Angebot;
+import com.kiosk.kioskbackend.dto.AngebotRequest;
+import com.kiosk.kioskbackend.dto.AngebotResponse;
 import com.kiosk.kioskbackend.service.AngebotService;
-import com.kiosk.kioskbackend.service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.kiosk.kioskbackend.security.JwtService;
 
 import java.util.List;
 
@@ -17,25 +15,26 @@ import java.util.List;
 public class AngebotController {
 
     private final AngebotService angebotService;
-    private final AuthenticationService authService;
 
     @GetMapping
-    public List<Angebot> getAlleAngebote() {
-        return angebotService.getAlleAngebote();
+    public ResponseEntity<List<AngebotResponse>> getAlleAngebote() {
+        return ResponseEntity.ok(angebotService.getAlleAngebote());
     }
 
     @PostMapping
-    public Angebot neuesAngebot(@RequestBody Angebot angebot) {
-        return angebotService.neuesAngebotSpeichern(angebot);
-    }
-
-    @DeleteMapping("/{id}")
-    public void loescheAngebot(@PathVariable Long id) {
-        angebotService.angebotLoeschen(id);
+    public ResponseEntity<AngebotResponse> neuesAngebot(@RequestBody AngebotRequest request) {
+        return ResponseEntity.ok(angebotService.neuesAngebotSpeichern(request));
     }
 
     @PutMapping("/{id}")
-    public Angebot aktualisiereAngebot(@PathVariable Long id, @RequestBody Angebot angebot) {
-        return angebotService.angebotAktualisieren(id, angebot);
+    public ResponseEntity<AngebotResponse> aktualisiereAngebot(@PathVariable Long id,
+                                                               @RequestBody AngebotRequest request) {
+        return ResponseEntity.ok(angebotService.angebotAktualisieren(id, request));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> loescheAngebot(@PathVariable Long id) {
+        angebotService.angebotLoeschen(id);
+        return ResponseEntity.noContent().build();
     }
 }

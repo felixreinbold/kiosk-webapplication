@@ -17,6 +17,10 @@ public class Angebot {
     private String beschreibung;
     private String bildUrl;
 
+
+    @Column(name = "image_data", columnDefinition = "bytea")
+    private byte[] imageData;
+
     public String getTitel() {
         return titel;
     }
