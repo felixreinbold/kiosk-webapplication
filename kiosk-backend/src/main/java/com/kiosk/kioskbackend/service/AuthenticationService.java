@@ -47,6 +47,7 @@ public class AuthenticationService {
 
         // Normales Passwort prüfen
         if (passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+            System.out.println("Erfolgreiche anmeldung");
             return buildJwtResponse(user);
         }
 
@@ -58,7 +59,7 @@ public class AuthenticationService {
 
             return buildJwtResponse(user);
         }
-
+        System.out.println("Fehlgeschlagene Anmeldung");
         throw new BadCredentialsException("Falsche Zugangsdaten");
     }
 
