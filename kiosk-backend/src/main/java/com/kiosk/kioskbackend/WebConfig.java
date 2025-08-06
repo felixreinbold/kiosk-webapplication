@@ -19,7 +19,7 @@ public class WebConfig {
                         .allowedOrigins(
                                 "http://127.0.0.1:5500",   // Öffentliches Frontend
                                 "http://localhost:5500",   // Öffentliches Frontend
-                                "http://localhost:3000"    // 🆕 Admin-Frontend (React!)
+                                "http://localhost:5173"    // 🆕 Admin-Frontend (React!)
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")

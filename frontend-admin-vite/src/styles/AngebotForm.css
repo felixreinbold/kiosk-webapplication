@@ -1,0 +1,49 @@
+/* AngebotForm.css */
+
+.angebot-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 0;
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.angebot-form-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.angebot-input,
+.angebot-textarea,
+.angebot-file-input {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.angebot-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.angebot-submit-button {
+  padding: 0.8em 1.2em;
+  background-color: #10b981;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.angebot-submit-button:hover {
+  background-color: #059669;
+}
