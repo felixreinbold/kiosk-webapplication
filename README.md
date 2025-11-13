@@ -2,7 +2,7 @@ Die Kiosk-Webapplikation ist eine vereinfachte Weblösung, mit der ein Veranstal
 Die Veranstaltungen werden in einer Datenbank mit Bildern persistiert.
 Über ein geschütztes Admin-Dashboard können Events erstellt, bearbeitet oder gelöscht werden, während die öffentliche Webseite automatisch alle veröffentlichten Veranstaltungen anzeigt.
 
-Der Name Kiosk stammt aus meiner Ursprünglichen Idee weil ein bekannter einen Kisok besitzt bei dem er gelegentlich Angebote macht.
+Der Name Kiosk stammt aus meiner Ursprünglichen Idee weil ein bekannter einen Kisok besitzt bei dem er gelegentlich Angebote für besondere Spezialitäten macht.
 
 Diese Applikation kann von jedem veranstalter implementiert werden und mit wenig technischem Aufwand auf seiner Homepage einsetzen.
 
