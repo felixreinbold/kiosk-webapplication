@@ -11,8 +11,8 @@ import java.util.Base64;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
-@RequiredArgsConstructor
+    @Service
+    @RequiredArgsConstructor
 public class AngebotService {
 
     private final AngebotRepository angebotRepository;
